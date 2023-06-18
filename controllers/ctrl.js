@@ -10,6 +10,7 @@ const userValidation = require('../validation/validation');
  * @param {express.Response} res 
  */
 exports.inscription = (req, res) => {
+    console.log("USER SIGNUP");
     // Récupérer les données
     const { body } = req;
 
@@ -41,6 +42,7 @@ exports.inscription = (req, res) => {
  * @param {express.Response} res 
  */
 exports.connexion = (req, res) => {
+    console.log("USER LOGIN");
     const { email, password } = req.body;
     // Validation des données
     const { err } = userValidation(req.body).userValidationLogin
