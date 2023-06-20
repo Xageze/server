@@ -61,7 +61,6 @@ exports.connexion = (req, res) => {
                 .then(match => {
                     if (!match) return res.status(401).json({ msg: "Incorrect password" });
 
-                    // ENV variables
                     // Token creation
                     res.status(200).json({
                         email: user.email,
